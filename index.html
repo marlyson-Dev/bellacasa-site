@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Bella Casa Construções | Materiais e Acabamentos</title>
+<meta name="description" content="Tudo para a sua obra: hidráulica, elétrica, tintas e ferramentas. Faça o seu pedido via WhatsApp.">
+<meta name="keywords" content="materiais de construção, ferragens, hidráulica, elétrica, bella casa">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Bella Casa Construções | Tudo para sua Obra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="img/logo.png" alt="Bella Casa" class="splash-logo">
+        </div>
+    </div>
+
+    <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
+    <div id="cart-overlay" class="menu-overlay" onclick="toggleCarrinho()"></div>
+
+    <div id="menu-lateral" class="menu-sidebar">
+        <div class="side-header">
+            <h3>Menu Bella Casa</h3>
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+        </div>
+
+        <div class="menu-body">
+            <div class="user-area">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <a href="#" class="login-link">Entre ou Cadastre-se</a>
+                    <p>Minha conta e pedidos</p>
+                </div>
+            </div>
+
+            <hr class="menu-divider">
+            <p class="menu-title">CATEGORIAS</p>
+
+            <div class="categoria-item">
+                <div class="categoria-nome" onclick="toggleSubmenu(this)">
+                    <span><i class="fas fa-faucet"></i> Hidráulica</span>
+                    <i class="fas fa-chevron-down seta-menu"></i>
+                </div>
+                <div class="sub-menu">
+                    <a href="#">Conexões</a>
+                    <a href="#">Tubos</a>
+                    <a href="#">Bombas - Pressão</a>
+                    <a href="#">Irrigação</a>
+                    <a href="#">Manutenção</a>
+                    <a href="#">Instalação - Vedação</a>
+                    <a href="#">Acabamento</a>
+                </div>
+            </div>
+
+            <div class="categoria-item">
+                <div class="categoria-nome" onclick="toggleSubmenu(this)">
+                    <span><i class="fas fa-bolt"></i> Elétrica</span>
+                    <i class="fas fa-chevron-down seta-menu"></i>
+                </div>
+                <div class="sub-menu">
+                    <a href="#">Fios e Cabos</a>
+                    <a href="#">Tomadas e Interruptores</a>
+                    <a href="#">Iluminação</a>
+</div>
+<div class="categoria-item">
+    <div class="categoria-nome" onclick="toggleSubmenu(this)">
+        <span><i class="fas fa-hammer"></i> Ferramentas</span> 
+        <i class="fas fa-chevron-down seta-menu"></i>
+    </div>
+    <div class="sub-menu">
+        <a href="#">Alicates</a>
+        <a href="#">Martelos</a>
+        <a href="#">Fechaduras</a>
+        <a href="#">Dobradiças</a>
+        <a href="#">EPIs</a>
+    </div>
+</div> <div class="categoria-item">
+    <div class="categoria-nome" onclick="toggleSubmenu(this)">
+        <span><i class="fas fa-tint"></i> Pintura</span> 
+        <i class="fas fa-chevron-down seta-menu"></i>
+    </div>
+    <div class="sub-menu">
+        <a href="#">Esmalte Sintético</a>
+        <a href="#">Zarcão</a>
+        <a href="#">Tintas Acrílicas</a>
+        <a href="#">Pincéis</a>
+        <a href="#">Rolos</a>
+    </div>
+</div> 
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="menu-icons" onclick="toggleMenu()" style="cursor: pointer;">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <div class="logo-nav">
+            <img src="img/logo.png" alt="Bella Casa">
+        </div>
+
+        <div class="menu-icons">
+            <div class="cart-icon" onclick="toggleCarrinho()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+</div>
+
+    </nav>
+
+    <main id="main-content">
+        <header class="hero-construcao">
+            <img src="img/logo2.png" alt="Bella Casa" class="hero-logo-principal">
+            <p class="hero-slogan">O QUE VOCÊ QUER CONSTRUIR HOJE?</p>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="O que você precisa para sua obra?">
+            </div>
+        </div>
+
+        <div class="promo-container revelar">
+            <div class="promo-slider" id="promo-slider">
+                <div class="slide active"><img src="img/banner1.png" alt="Promo 1"></div>
+                <div class="slide"><img src="img/banner2.png" alt="Promo 2"></div>
+                <div class="slide"><img src="img/banner3.png" alt="Promo 3"></div>
+            </div>
+
+            <button class="slider-arrow prev" onclick="mudarSlideManual(-1)">❮</button>
+            <button class="slider-arrow next" onclick="mudarSlideManual(1)">❯</button>
+            
+            <div class="slider-dots" id="slider-dots">
+                <span class="dot active" onclick="irParaSlide(0)"></span>
+                <span class="dot" onclick="irParaSlide(1)"></span>
+                <span class="dot" onclick="irParaSlide(2)"></span>
+            </div>
+        </div>
+
+        <section class="secao-produtos">
+            <h2 class="section-title revelar">Ofertas do Dia</h2>
+            <div id="grid-produtos" class="grid-layout">
+                </div>
+        </section>
+
+        <section class="secao-produtos">
+            <h2 class="section-title revelar">Todos os Produtos</h2>
+            <div id="grid-geral" class="grid-layout">
+                </div>
+            
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+                <button id="btn-ver-mais" class="btn-maps" onclick="toggleProdutos()">
+                    VER MAIS PRODUTOS
+                </button>
+            </div>
+        </section>
+
+        <footer class="footer-premium revelar">
+            <div class="footer-container">
+                <div class="footer-map-card">
+                    <div class="map-icon-circle">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>BELLA CASA CONSTRUÇÕES</h3>
+                    <p>R. do Nobre, Paulista - PE</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn-maps">VER NO GOOGLE MAPS</a>
+                </div>
+
+                <div class="footer-info">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-location-arrow"></i></div>
+                        <div>
+                            <h4>ENDEREÇO</h4>
+                            <p>R. Nobre, 1847<br>Nobre - Paulista, PE<br>CEP: 53401-610</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>TELEFONE</h4>
+                            <p>(81) 98755-4832</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>HORÁRIO DE ATENDIMENTO</h4>
+                            <p>Segunda a Sexta: 07h às 17h<br>Sábado: 07h às 15h<br>Domingo: 08h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© 2026 Bella Casa Construções - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div id="carrinho-lateral" class="cart-sidebar">
+        <div class="cart-header">
+            <div class="header-title">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Meu Carrinho</span>
+            </div>
+            <button class="close-cart" onclick="toggleCarrinho()">×</button>
+        </div>
+        
+        <div id="itens-carrinho" class="cart-body">
+            </div>
+
+        <div class="cart-footer">
+            <div class="total-info">
+                <span class="total-label">Subtotal</span>
+                <span id="total-carrinho" class="total-value">R$ 0,00</span>
+           <a id="btn-finalizar-whatsapp" href="#" target="_blank" class="btn-checkout" 
+   style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; width: 100%; box-sizing: border-box;">
+    <i class="fab de fa-whatsapp"></i>
+    <div style="text-align: left;">
+        <span style="display: block; font-weight: bold; font-size: 14px;">FINALIZAR PEDIDO</span>
+        <span style="display: block; font-size: 10px;">*Frete e entrega a combinar</span>
+    </div>
+</a>
+
+
+    <script src="script.js"></script>
+    <script>
+        function finalizarSplash() {
+            const splash = document.getElementById('splash-screen');
+            if (splash) {
+                splash.classList.add('hidden');
+                setTimeout(() => { splash.style.display = 'none'; }, 600); 
+            }
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(finalizarSplash, 2500);
+            if(typeof renderizarTudo === "function") {
+                renderizarTudo();
+            }
+        });
+    </script>
+    <script src="js/seu-arquivo.js"></script>
+</body>
